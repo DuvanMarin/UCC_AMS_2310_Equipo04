@@ -7,10 +7,20 @@ import { Observable } from 'rxjs';
 })
 export class CharactersService {
   private API_URL =
-    'https://mf-characters.s3.amazonaws.com/result_7fd7811c-680d-4b91-a879-17b4ce53967a.json';
+    'https://lgvu3fqtzgdltmllcyt6342qn40cqxjn.lambda-url.us-east-1.on.aws/';
 
   constructor(private http: HttpClient) {}
-  getCharacters(): Observable<any> {
-    return this.http.get<any>(this.API_URL);
+  getCharacters() {
+    const cachedData = localStorage.getItem('cachedData');
+    if (cachedData) {
+      return JSON.parse(cachedData);
+    }
+    return this.http
+      .get(this.API_URL)
+      .toPromise()
+      .then((response) => {
+        localStorage.setItem('cachedData', JSON.stringify(response));
+        return response;
+      });
   }
 }
