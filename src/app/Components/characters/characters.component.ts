@@ -10,11 +10,8 @@ export class CharactersComponent implements OnInit {
   characters: any[] | undefined;
   constructor(private charactersService: CharactersService) {}
   ngOnInit(): void {
-    this.charactersService.getCharacters().subscribe(
-      (data: any) => {
-        this.characters = data.data.results;
-      },
-      (error) => console.error(error)
-    );
+    this.charactersService.getCharacters().subscribe((data: any) => {
+      this.characters = data.data.results;
+    });
   }
 }
