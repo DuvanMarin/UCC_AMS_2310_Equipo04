@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CharactersService {
   private API_URL =
-    'https://lgvu3fqtzgdltmllcyt6342qn40cqxjn.lambda-url.us-east-1.on.aws/';
+    'https://mf-characters.s3.amazonaws.com/result_7fd7811c-680d-4b91-a879-17b4ce53967a.json';
 
   constructor(private http: HttpClient) {}
   getCharacters(): Observable<any> {
