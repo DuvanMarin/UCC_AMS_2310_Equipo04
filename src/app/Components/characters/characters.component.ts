@@ -6,7 +6,6 @@ import { CharactersService } from 'src/app/Service/characters.service';
   templateUrl: './characters.component.html',
   styleUrls: ['./characters.component.css'],
 })
-
 export class CharactersComponent implements OnInit {
   characters: any[] | undefined;
   constructor(private charactersService: CharactersService) {}
