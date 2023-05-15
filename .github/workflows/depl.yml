@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-lastest
     steps:
-      - uses: actions/checkout
+      - uses: actions/checkout@master
       - run: npm install
       - run: CI='' npm run build
       - uses: jakejarvis/s3-sync-action@master
