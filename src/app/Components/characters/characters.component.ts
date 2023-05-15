@@ -7,11 +7,21 @@ import { CharactersService } from 'src/app/Service/characters.service';
   styleUrls: ['./characters.component.css'],
 })
 export class CharactersComponent implements OnInit {
+  data: any;
+
   characters: any[] | undefined;
   constructor(private charactersService: CharactersService) {}
   ngOnInit(): void {
-    this.charactersService.getCharacters().subscribe((data: any) => {
-      this.characters = data.data.results;
-    });
+    this.getCharacters();
+  }
+  getCharacters() {
+    this.charactersService
+      .getCharacters()
+      .then((response) => {
+        this.characters = response;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 }

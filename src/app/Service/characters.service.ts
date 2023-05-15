@@ -6,20 +6,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CharactersService {
-  private API_URL =
-    'https://lgvu3fqtzgdltmllcyt6342qn40cqxjn.lambda-url.us-east-1.on.aws/';
-
+  private cachedDataKey = 'cachedData';
   constructor(private http: HttpClient) {}
-  getCharacters() {
-    const cachedData = localStorage.getItem('cachedData');
+
+  getCharacters(): Promise<any> {
+    const cachedData = localStorage.getItem(this.cachedDataKey);
     if (cachedData) {
       return JSON.parse(cachedData);
     }
+    const API_URL =
+      'https://lgvu3fqtzgdltmllcyt6342qn40cqxjn.lambda-url.us-east-1.on.aws/';
     return this.http
-      .get(this.API_URL)
+      .get(API_URL)
       .toPromise()
       .then((response) => {
-        localStorage.setItem('cachedData', JSON.stringify(response));
+        localStorage.setItem(this.cachedDataKey, JSON.stringify(response));
         return response;
       });
   }
