@@ -50,15 +50,16 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "mf-characters:build:production",
-              "proxyConfig": "proxy.conf.json"
+              "browserTarget": "mf-characters:build:production"
             },
             "development": {
-              "browserTarget": "mf-characters:build:development",
-              "proxyConfig": "proxy.conf.json"
+              "browserTarget": "mf-characters:build:development"
             }
           },
           "defaultConfiguration": "development"
