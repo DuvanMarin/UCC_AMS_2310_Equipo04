@@ -10,8 +10,9 @@ import { CharactersService } from 'src/app/Service/characters.service';
 export class CharactersComponent implements OnInit {
   constructor(private charactersService: CharactersService) {}
 
-  allCharacters: Observable<any> | undefined;
-  ngOnInit(): void {
+  allCharacters: Observable<any> | undefined ;
+
+  ngOnInit() {
     this.getCharacters();
   }
 

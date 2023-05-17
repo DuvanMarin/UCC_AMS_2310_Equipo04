@@ -7,14 +7,12 @@ import { Observable, map } from 'rxjs';
 })
 export class CharactersService {
   API_URL =
-    'https://lgvu3fqtzgdltmllcyt6342qn40cqxjn.lambda-url.us-east-1.on.aws/';
+    'https://7swmfjicbvt64buikmhfazha2q0rfhxq.lambda-url.us-east-1.on.aws/';
   constructor(private http: HttpClient) {}
 
   getCharacters(): Observable<any> {
-    return this.http.get(this.API_URL).pipe(
-      map((data: any) => {
-        data.data.results;
-      })
-    );
+    return this.http
+      .get(this.API_URL)
+      .pipe(map((data: any) => data.data.results));
   }
 }

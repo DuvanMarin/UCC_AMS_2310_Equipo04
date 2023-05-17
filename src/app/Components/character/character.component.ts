@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { CharactersService } from 'src/app/Service/characters.service';
-import { Observable } from 'rxjs';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-character',
@@ -8,10 +6,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./character.component.css'],
 })
 export class CharacterComponent implements OnInit {
-  constructor(private characterService: CharactersService) {}
-  allCharacters: Observable<any> | undefined;
-  ngOnInit() {}
-  getCharacters() {
-    this.allCharacters = this.characterService.getCharacters();
-  }
+  @Input() character: any;
+  constructor() {}
+  ngOnInit(): void {}
 }
