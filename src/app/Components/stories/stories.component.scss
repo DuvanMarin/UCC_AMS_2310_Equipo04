@@ -1,0 +1,90 @@
+.grid {
+  display: grid;
+  width: 114rem;
+  grid-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: start;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: relative;
+  color: #ffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-grid:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.card-date {
+  font-size: 14px;
+  color: #ffffff80;
+  padding-bottom: 10px;
+  margin: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.card-description {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.card-button {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #000;
+  background-color: #e6ecff;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.card-button:hover {
+  background-color: #552277;
+  color: #fff;
+}
+
+.card-pattern {
+  background-image: url("../../../assets/blob-scene-haikei.svg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
