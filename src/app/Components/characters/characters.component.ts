@@ -5,12 +5,12 @@ import { CharactersService } from 'src/app/Service/characters.service';
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.css'],
+  styleUrls: ['./characters.component.scss'],
 })
 export class CharactersComponent implements OnInit {
   constructor(private charactersService: CharactersService) {}
 
-  allCharacters: Observable<any> | undefined ;
+  allCharacters: Observable<any> | undefined;
 
   ngOnInit() {
     this.getCharacters();
