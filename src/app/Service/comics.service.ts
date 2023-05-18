@@ -5,12 +5,12 @@ import { Observable, map } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class CharactersService {
+export class ComicsService {
   API_URL =
-    'https://7swmfjicbvt64buikmhfazha2q0rfhxq.lambda-url.us-east-1.on.aws/';
+    'https://ildhstpj3czdecrrukorzfkgru0uelzk.lambda-url.us-east-1.on.aws/';
   constructor(private http: HttpClient) {}
 
-  getCharacters(): Observable<any> {
+  getComics(): Observable<any> {
     return this.http
       .get(this.API_URL)
       .pipe(map((data: any) => data.data.results));

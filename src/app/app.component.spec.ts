@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'mf-characters'`, () => {
+  it(`should have as title 'mf-comics'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('mf-characters');
+    expect(app.title).toEqual('mf-comics');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('mf-characters app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('mf-comics app is running!');
   });
 });
