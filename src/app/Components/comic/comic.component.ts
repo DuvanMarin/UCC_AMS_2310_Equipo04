@@ -5,7 +5,6 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './comic.component.html',
   styleUrls: ['./comic.component.scss'],
 })
-
 export class ComicComponent {
   @Input() comic: any;
   constructor() {}
