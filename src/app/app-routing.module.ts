@@ -4,11 +4,6 @@ import { CharactersComponent } from './Components/characters/characters.componen
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/characters',
-    pathMatch: 'full',
-  },
-  {
     path: 'characters',
     component: CharactersComponent,
   },
