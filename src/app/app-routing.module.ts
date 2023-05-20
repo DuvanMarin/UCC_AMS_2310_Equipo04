@@ -4,7 +4,7 @@ import { CharactersComponent } from './Components/characters/characters.componen
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'characters',
     component: CharactersComponent,
   },
 ];
