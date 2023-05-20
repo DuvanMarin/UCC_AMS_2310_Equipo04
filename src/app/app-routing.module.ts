@@ -4,7 +4,7 @@ import { StoriesComponent } from './Components/stories/stories.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'stories',
     component: StoriesComponent,
   },
 ];
