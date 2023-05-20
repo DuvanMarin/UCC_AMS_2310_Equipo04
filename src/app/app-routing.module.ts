@@ -4,7 +4,7 @@ import { SeriesComponent } from './Components/series/series.component';
 
 const routes: Routes = [
   {
-    path: 'series',
+    path: '',
     component: SeriesComponent,
   },
 ];
