@@ -5,11 +5,6 @@ import { EventsComponent } from './events/events.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/events',
-    pathMatch: 'full',
-  },
-  {
-    path: 'events',
     component: EventsComponent,
   },
 ];
