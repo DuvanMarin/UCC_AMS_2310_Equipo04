@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CharactersService } from './characters.service';
+import { MarvelAPIService } from './marvel-api.service';
 
-describe('CharactersService', () => {
-  let service: CharactersService;
+describe('MarvelAPIService', () => {
+  let service: MarvelAPIService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CharactersService);
+    service = TestBed.inject(MarvelAPIService);
   });
 
   it('should be created', () => {
