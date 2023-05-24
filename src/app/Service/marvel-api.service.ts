@@ -8,7 +8,7 @@ import { Observable, map } from 'rxjs';
 export class MarvelAPIService {
   TIMESTAMP = 1;
   PUBLIC_KEY = '2dc2cd91d9a820fe5004bf92699210e2';
-  HASH = '586c3a6fadac2d9a01cb496a6f210293';
+  HASH = '430012a2b7fc44c9d50feda2f1ea4bad';
   URL_API = `https://gateway.marvel.com:443/v1/public/events?apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
 
   constructor(private http: HttpClient) {}
