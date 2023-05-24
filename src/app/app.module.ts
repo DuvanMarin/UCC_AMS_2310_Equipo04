@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EventsComponent } from './events/events.component';
 
+
+
 @NgModule({
   declarations: [AppComponent, EventsComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
