@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
-const md5 = require('md5');
+import md5 from 'md5';
 
 @Injectable({
   providedIn: 'root',
