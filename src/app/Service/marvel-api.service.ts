@@ -22,7 +22,7 @@ export class MarvelAPIService {
   }
 }
 function generateHash(TIMESTAMP: any, PUBLIC_KEY: any, PRIVATE_KEY: any) {
-  const data = TIMESTAMP + PUBLIC_KEY + PRIVATE_KEY;
+  const data = TIMESTAMP + PRIVATE_KEY + PUBLIC_KEY;
   const hash = md5(data);
   return hash;
 }
